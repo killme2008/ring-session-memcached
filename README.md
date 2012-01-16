@@ -8,9 +8,9 @@ In your project.clj:
     [ring-session-memcached "0.0.1"]
 
 Wrap your routes:
-
+	(use 'ring.middleware.session.memcached)
     (-> routes
-        (wrap-session {:store (ring.middleware.session.memcached/mem-store "host1:11211 host2:11211")}))
+        (wrap-session {:store (mem-store "host1:11211 host2:11211")}))
 
 The mem-store fn provides a few options to give it:
 
