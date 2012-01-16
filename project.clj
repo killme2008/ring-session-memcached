@@ -1,4 +1,4 @@
-(defproject ring-session-memcached "0.0.1-SNAPSHOT"
+(defproject ring-session-memcached "0.0.1"
   :description "Ring sessions stored in memcached"
   :dependencies [[ring/ring-core "1.0.1"]
                  [clj-xmemcached "0.1.1"]]

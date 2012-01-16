@@ -8,6 +8,8 @@ In your project.clj:
     [ring-session-memcached "0.0.1"]
 
 Wrap your routes:
+
+
 	(use 'ring.middleware.session.memcached)
     (-> routes
         (wrap-session {:store (mem-store "host1:11211 host2:11211")}))
@@ -22,7 +24,7 @@ The mem-store fn provides a few options to give it:
 
 For example:
 
-	(mem-store "lcoalhost:11211" :timeout 3000 :hash consistent)
+	(mem-store "localhost:11211" :timeout 3000 :hash "consistent")
 
 
 ## License
